@@ -16,7 +16,7 @@ spec:
         - name: airflow-container
           image: apache/airflow:2.7.0
           ports:
-            - containerPort: 8080  # Porta do Apache Airflow
+            - containerPort: 8080 
           volumeMounts:
             - name: dags-volume
               mountPath: /home/guilherme/dev/airflow_rev3/dags
