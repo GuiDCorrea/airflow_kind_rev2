@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: airflow-user
+type: Opaque
+data:
+  AIRFLOW__WEBSERVER__AUTHENTICATE: YXBwbGU6cGFzc3dvcmQ=

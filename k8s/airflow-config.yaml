@@ -1,0 +1,19 @@
+airflow:
+  dags:
+    path: /opt/airflow_rev3
+    persistence:
+      enabled: true
+      existingClaim: my-volume-claim
+
+webserver:
+  extraConfigVolume:
+    - name: webserver-config
+      mountPath: /usr/local/airflow/webserver_config
+  extraVolumes:
+    - name: webserver-config
+      configMap:
+        name: airflow-webserver-configmap
+
+  image:
+    repository: your-local-airflow-image
+    tag: latest
